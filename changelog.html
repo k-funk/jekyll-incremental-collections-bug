@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1>Changelog</h1>
+
+  <ul>
+    {% for change in site.changes %}
+      <li>
+        <span class="change-meta">{{ change.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          {{ change.title }}
+        </h2>
+        <p> {{ change.content }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
